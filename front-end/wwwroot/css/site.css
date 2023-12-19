@@ -1,0 +1,220 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  height: 100vh;
+  background-color: #2B3035;
+}
+
+.container-bg {
+  height: 100%;
+}
+
+main {
+  height: 100%;
+}
+
+.game-overlay {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.finished-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .4);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  z-index: 100;
+  display: none;
+}
+
+.finished-box {
+  background-color: white;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding-block: 15px;
+  padding-inline: 40px;
+}
+
+.game-table {
+  /* background-color: aliceblue; */
+  width: 750px;
+  height: 400px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 20px;
+  align-items: center;
+}
+
+#header-middle {
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.play {
+  background-color: #258cfb;
+  border: none;
+  padding-block: 5px;
+  padding-inline: 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 20px;
+  transition: 400ms;
+  color: white;
+}
+
+.play:not(:disabled):hover {
+  opacity: .8;
+}
+
+.play:active {
+  transform: scale(.85);
+}
+
+.player {
+  display: flex;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  align-items: center;
+  transition: 500ms;
+}
+
+#p2 {
+  opacity: 0;
+}
+
+.player-img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+.game {
+  flex: 1;
+  background-color: rgb(250, 250, 250);
+  border-radius: 30px;
+  box-shadow: 3px 3px 2px 0 rgba(250, 250, 250, .4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 10px;
+}
+
+.piece-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.piece-container {
+  width: 75px;
+  height: 75px;
+  perspective: 600px;
+}
+
+.piece-container:not(:first-child .piece-selected):hover {
+  cursor: pointer;
+  transform: scale(.85);
+  transition: .5s ease-out;
+}
+
+.piece {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(50, 50, 50);
+  border-radius: 50%;
+  position: relative;
+  transition: transform 2s;
+  transform-style: preserve-3d;
+}
+
+.piece-front,
+.piece-back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.piece-back {
+  transform: rotateY(180deg);
+}
+
+.piece-flipped {
+  transform: rotateY(180deg);
+}
+
+.icon {
+  width: 100%;
+  pointer-events: none;
+}
+
+.piece-red {
+  background-color: tomato;
+}
+
+.piece-black {
+  background-color: black;
+}
+
+.piece-selected {
+  transition: 500ms;
+  animation-name: piece-selected;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in;
+}
+
+@keyframes piece-selected {
+  40% {
+    transform: scale(.8);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}

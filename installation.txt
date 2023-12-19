@@ -1,0 +1,15 @@
+Steps:
+- a mongo db instance needs to be running on port 27017 that has no username and no password,
+  you can  also change the connection string in the game-server appsettings.json to the desired connection string.
+
+- the solution uses .net core 8, so dotnet developer tools needs to be installed
+
+- to run the solution cd to each folder and type dotnet run in your terminal of choice to start each of the three applications,
+  or if using visual studio just press the run button on each project.
+
+### Disclaimer ###
+- if the default the ports 13, 5038, 5214, 3500 are used by your pc try changing them:
+ - port 13 is used by matchmaking and game servers for tcp you can change each project's program.cs.
+ - port 5038 is used by the game server you can change it from lunchSetting.json.
+ - port 5214 is used by the front-end server can change it from lunchSetting.json.
+ - port 3500 is used by the matchmaking server for udp you can change it from the client.cs class.

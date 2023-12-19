@@ -1,0 +1,239 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<object id="king" class="icon" type="image/svg+xml" data="~/icons/king.svg" style="display: none;"></object>
+<object id="adviser" class="icon" type="image/svg+xml" data="~/icons/queen.svg" style="display: none;"></object>
+<object id="bishop" class="icon" type="image/svg+xml" data="~/icons/castle.svg" style="display: none;"></object>
+<object id="rook" class="icon" type="image/svg+xml" data="~/icons/bishop.svg" style="display: none;"></object>
+<object id="knight" class="icon" type="image/svg+xml" data="~/icons/knight.svg" style="display: none;"></object>
+<object id="cannon" class="icon" type="image/svg+xml" data="~/icons/cannon.svg" style="display: none;"></object>
+<object id="pawn" class="icon" type="image/svg+xml" data="~/icons/pawn.svg" style="display: none;"></object>
+
+<div class="game-overlay">
+    <div class="finished-overlay" id="overlay">
+        <div class="finished-box">
+            <h2 class="finished" id="finished">You Won</h2>
+            <button id="back-button" class="play">Exit</button>
+        </div>
+    </div>
+    <div class="game-table">
+        <div class="table-header">
+            <div class="player" id="p1">
+                <div class="player-img"> </div>
+                <div class="player-data">You</div>
+            </div>
+            <div id="header-middle">
+                <button id="play" class="play">Play</button>
+            </div>
+            <div class="player" id="p2">
+                <div class="player-data">Opponnent</div>
+                <div class="player-img"></div>
+            </div>
+        </div>
+        <div class="game">
+            <div class="piece-row">
+                <div class="piece-container">
+                    <div class="piece" id="piece">
+                        <div class="piece-front"></div>
+                        <div class="piece-back"></div>
+                    </div>
+                </div>
+                <div class="piece-container">
+                    <div class="piece" id="piece">
+                        <div class="piece-front"></div>
+                        <div class="piece-back"></div>
+                    </div>
+                </div>
+                <div class="piece-container">
+                    <div class="piece" id="piece">
+                        <div class="piece-front"></div>
+                        <div class="piece-back"></div>
+                    </div>
+                </div>
+                <div class="piece-container">
+                    <div class="piece" id="piece">
+                        <div class="piece-front"></div>
+                        <div class="piece-back"></div>
+                    </div>
+                </div>
+                <div class="piece-container">
+                    <div class="piece" id="piece">
+                        <div class="piece-front"></div>
+                        <div class="piece-back"></div>
+                    </div>
+                </div>
+                <div class="piece-container">
+                    <div class="piece" id="piece">
+                        <div class="piece-front"></div>
+                        <div class="piece-back"></div>
+                    </div>
+                </div>
+                <div class="piece-container">
+                    <div class="piece" id="piece">
+                        <div class="piece-front"></div>
+                        <div class="piece-back"></div>
+                    </div>
+                </div>
+                <div class="piece-container">
+                    <div class="piece" id="piece">
+                        <div class="piece-front"></div>
+                        <div class="piece-back"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="piece-row">
+                <div class="piece-container">
+                    <div class="piece" id="piece">
+                        <div class="piece-front"></div>
+                        <div class="piece-back"></div>
+                    </div>
+                </div>
+                <div class="piece-container">
+                    <div class="piece" id="piece">
+                        <div class="piece-front"></div>
+                        <div class="piece-back"></div>
+                    </div>
+                </div>
+                <div class="piece-container">
+                    <div class="piece" id="piece">
+                        <div class="piece-front"></div>
+                        <div class="piece-back"></div>
+                    </div>
+                </div>
+                <div class="piece-container">
+                    <div class="piece" id="piece">
+                        <div class="piece-front"></div>
+                        <div class="piece-back"></div>
+                    </div>
+                </div>
+                <div class="piece-container">
+                    <div class="piece" id="piece">
+                        <div class="piece-front"></div>
+                        <div class="piece-back"></div>
+                    </div>
+                </div>
+                <div class="piece-container">
+                    <div class="piece" id="piece">
+                        <div class="piece-front"></div>
+                        <div class="piece-back"></div>
+                    </div>
+                </div>
+                <div class="piece-container">
+                    <div class="piece" id="piece">
+                        <div class="piece-front"></div>
+                        <div class="piece-back"></div>
+                    </div>
+                </div>
+                <div class="piece-container">
+                    <div class="piece" id="piece">
+                        <div class="piece-front"></div>
+                        <div class="piece-back"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="piece-row">
+                <div class="piece-container">
+                    <div class="piece" id="piece">
+                        <div class="piece-front"></div>
+                        <div class="piece-back"></div>
+                    </div>
+                </div>
+                <div class="piece-container">
+                    <div class="piece" id="piece">
+                        <div class="piece-front"></div>
+                        <div class="piece-back"></div>
+                    </div>
+                </div>
+                <div class="piece-container">
+                    <div class="piece" id="piece">
+                        <div class="piece-front"></div>
+                        <div class="piece-back"></div>
+                    </div>
+                </div>
+                <div class="piece-container">
+                    <div class="piece" id="piece">
+                        <div class="piece-front"></div>
+                        <div class="piece-back"></div>
+                    </div>
+                </div>
+                <div class="piece-container">
+                    <div class="piece" id="piece">
+                        <div class="piece-front"></div>
+                        <div class="piece-back"></div>
+                    </div>
+                </div>
+                <div class="piece-container">
+                    <div class="piece" id="piece">
+                        <div class="piece-front"></div>
+                        <div class="piece-back"></div>
+                    </div>
+                </div>
+                <div class="piece-container">
+                    <div class="piece" id="piece">
+                        <div class="piece-front"></div>
+                        <div class="piece-back"></div>
+                    </div>
+                </div>
+                <div class="piece-container">
+                    <div class="piece" id="piece">
+                        <div class="piece-front"></div>
+                        <div class="piece-back"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="piece-row">
+                <div class="piece-container">
+                    <div class="piece" id="piece">
+                        <div class="piece-front"></div>
+                        <div class="piece-back"></div>
+                    </div>
+                </div>
+                <div class="piece-container">
+                    <div class="piece" id="piece">
+                        <div class="piece-front"></div>
+                        <div class="piece-back"></div>
+                    </div>
+                </div>
+                <div class="piece-container">
+                    <div class="piece" id="piece">
+                        <div class="piece-front"></div>
+                        <div class="piece-back"></div>
+                    </div>
+                </div>
+                <div class="piece-container">
+                    <div class="piece" id="piece">
+                        <div class="piece-front"></div>
+                        <div class="piece-back"></div>
+                    </div>
+                </div>
+                <div class="piece-container">
+                    <div class="piece" id="piece">
+                        <div class="piece-front"></div>
+                        <div class="piece-back"></div>
+                    </div>
+                </div>
+                <div class="piece-container">
+                    <div class="piece" id="piece">
+                        <div class="piece-front"></div>
+                        <div class="piece-back"></div>
+                    </div>
+                </div>
+                <div class="piece-container">
+                    <div class="piece" id="piece">
+                        <div class="piece-front"></div>
+                        <div class="piece-back"></div>
+                    </div>
+                </div>
+                <div class="piece-container">
+                    <div class="piece" id="piece">
+                        <div class="piece-front"></div>
+                        <div class="piece-back"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/signalr.min.js"></script>
